@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passoword Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>PASSWORD GENERATOR</h1>
+    </div>
+    <hr>
+    <form action="">
+      <div class="length">
+        <ul>
+          <li>
+            <label class="form-label" for="length">Password Length:</label>
+            <select name="length" id="length">
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+      <div class="include">
+        <ul>
+          <li>
+            <label class="form-label" for="numbers">Include Numbers:</label>
+            <div>
+              <input checked type="checkbox" name="numbers" id="numbers">
+              <span class="eg">(e.g.: 123456)</span>
+            </div>
+          </li>
+          <li>
+            <label class="form-label" for="symbols">Include Symbols:</label>
+            <div>
+              <input type="checkbox" name="symbols" id="symbols">
+              <span class="eg">(e.g.: !@#$%^&*_?<>~)</span>
+            </div>
+          </li>
+          <li>
+            <label class="form-label" for="uppercase">Include Uppercase Letters:</label>
+            <div>
+              <input checked type="checkbox" name="uppercase" id="uppercase">
+              <span class="eg">(e.g.: ABCDEFGH)</span>
+            </div>
+          </li>
+          <li>
+            <label class="form-label" for="lowercase">Include Lowercase Letters:</label>
+            <div>
+              <input checked type="checkbox" name="lowercase" id="lowercase">
+              <span class="eg">(e.g.: abcdefgh)</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="generate">
+        <div class="form-label">
+          <button type="button" id="generate-button">GENERATE PASSWORD</button>
+        </div>
+        <div class="display-wrapper">
+          <div class="display">
+            <span id="display-text"></span>
+            <button type="button" id="clipboard-button"><i class="fas fa-clipboard"></i></button>
+          </div>
+          <div id="clipboard-text">
+            PASSWORD COPIED TO YOUR CLIPBOARD
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
